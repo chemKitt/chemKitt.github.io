@@ -26,10 +26,12 @@
             font-weight:bolder;
             font-family:Arial, Helvetica, sans-serif;
             background-color:rgb(18, 105, 62);
-            grid-area:menu;
+            grid-area: menu;
         }
         div.mainContent {
-            white-space: pre-wrap;
+            line-height: 35px;
+            padding-left: 200px;
+            padding-top: 20px;
             font-family:monospace;
             font-size: large;
             color: rgb(44, 212, 81);
@@ -62,12 +64,9 @@
         <div class="header">Header</div>
         <div class="menu">Menu</div> 
         <div id="loremText" class="mainContent">
-
-        </div>
-<!--
-            Lorem 
+            <!-- <iframe style="border: 0; width: 2.4%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2774555021/size=small/bgcol=333333/linkcol=9a64ff/track=1447390009/transparent=true/" seamless><a href="http://anamanaguchi.bandcamp.com/album/usa">[USA] by Anamanaguchi</a></iframe>
             
-            ipsum quia dolor sit amet
+            Lorem ipsum quia dolor sit amet
 
             Lorem ipsum quia dolor sit amet
 
@@ -76,23 +75,52 @@
             L̩̋or̜̕ê͟m ip̣͑s̯͑u̥͒͐͟ḿ̩ q̢̽ų̛̱̺̻̆̽͠i̘̙̋͝a̬̱͇͂͂̿ d̵̡̠̭̱͓͓͕̗̖͔̊̓̽̌̾̈́̅͑̈́̄͋̋͌͆̀̌̚ͅo̶̯̼̪̝̩̪̣͉̪̳͕͑̓͠l̴̨̡̩͕̤̪̲̜͚͖̻͕͙̭̱͗͗́̅̈́̏o̴̡̡͈̰̰͙͇͙̰͙̫̦̲̻̗̜̻̪̳̙̞̮͕̾̌͒̎̈́́́̈́̇̆͒̑́̊̂̐́͑̔̃́̂̄͘͜͜͠r̸͖͔͌͗̋̿͊̑̓̈́͛́̍̕͝͝ ̵̨̡̛͖̺̝̬͖̬̱̖̱̜̖̮͉̮̌̌̅̐̍͐͊̑͊̾̐̏͋̆́̔͘ͅş̵̡͙̭̗̠̬̤̼̥̩̯͍̻̪̭͚̍̈͆̑̃̔̌̃̇̌͗͊̂̀͝͝ͅi̸̛̻͚̐̉̎̉̐́̈́́̏̃͊̓̏̑̂͌͋̉͐̕͘̕͝͝t̶̡̧͙̭̬̣̫̩̭͎̞̠̥͖̣͙͉̖̜͕̥̭͕͙̅̈́̿̆͆̓̇͊͊́̔̆͛̓͐͒̚͝͝ͅ ̸̡̫͖̟͙̤̔̉̑̿̓̈́́̈́̒̃͑̋͘̕͝ͅą̸̯͖̗̳̺̖͍͎̺̟̭̺̪̯̩̘̜̭̞̭̲̱̩͋̿̒̀̑͐̊͛͛̎͗̌̋̎̍̊̈́̈́͜͝͝͝m̸̨͉͙̜͖͎͍̫͔̠͔̫̠̊̋̀̈́́̎̈̀̿̍̋́̃͜͝ę̷̛͈̩̪̠̱̖̣̥̍̀̇̈́̽̐͆͆͗̈́̌̕̕͘ͅṯ̷̡̫͇̱̯̣͛́̽̾̅̀̊̀̒͑͗́̇̐̂̆͆̃̎͋̍̚̕͠͝ 
         
 -->
+        </div>
+        
         <script>
-            document.getElementById("loremText")
-            .addEventListener("click", function() {
-                var audio = new Audio("2_Anamanaguchi-Lorem Ipsum (Arctic Anthem).mp3");
-                audio.play();
-                
-                var syllables = ['Lo','rem ','ip','sum ','quia ','do','lor ','sit ','a','met'];
-                var delay =  [1000,2000,2000,2000,2,2,2,2,2,2];
-                
-                for (sylCount = 0; sylCount < 5; sylCount++) {
-                    setTimeout(function() {
+
+            var newSyllables = ['L̩̋o','r̜̕ê͟m ','ip̣͑','s̯͑u̥͒͐͟ḿ̩ ','q̢̽ų̛̱̺̻̆̽͠i̘̙̋͝','a̬̱͇͂͂̿ ','d̵̡̠̭̱͓͓͕̗̖͔̊̓̽̌̾̈́̅͑̈́̄͋̋͌͆̀̌̚ͅo̶̯̼̪̝̩̪̣͉̪̳͕͑̓͠l̴̨̡̩͕̤̪̲̜͚͖̻͕͙̭̱͗͗́̅̈́̏o̴̡̡͈̰̰͙͇͙̰͙̫̦̲̻̗̜̻̪̳̙̞̮͕̾̌͒̎̈́́́̈́̇̆͒̑́̊̂̐́͑̔̃́̂̄͘͜͜͠r̸͖͔͌͗̋̿͊̑̓̈́͛́̍̕͝͝ ̵̨̡̛͖̺̝̬͖̬̱̖̱̜̖̮͉̮̌̌̅̐̍͐͊̑͊̾̐̏͋̆́̔͘ͅş̵̡͙̭̗̠̬̤̼̥̩̯͍̻̪̭͚̍̈͆̑̃̔̌̃̇̌͗͊̂̀͝͝ͅi̸̛̻͚̐̉̎̉̐́̈́́̏̃͊̓̏̑̂͌͋̉͐̕͘̕͝͝t̶̡̧͙̭̬̣̫̩̭͎̞̠̥͖̣͙͉̖̜͕̥̭͕͙̅̈́̿̆͆̓̇͊͊́̔̆͛̓͐͒̚͝͝ͅ ̸̡̫͖̟͙̤̔̉̑̿̓̈́́̈́̒̃͑̋͘̕͝ͅą̸̯͖̗̳̺̖͍͎̺̟̭̺̪̯̩̘̜̭̞̭̲̱̩͋̿̒̀̑͐̊͛͛̎͗̌̋̎̍̊̈́̈́͜͝͝͝m̸̨͉͙̜͖͎͍̫͔̠͔̫̠̊̋̀̈́́̎̈̀̿̍̋́̃͜͝ę̷̛͈̩̪̠̱̖̣̥̍̀̇̈́̽̐͆͆͗̈́̌̕̕͘ͅṯ̷̡̫͇̱̯̣͛́̽̾̅̀̊̀̒͑͗́̇̐̂̆͆̃̎͋̍̚̕͠͝ ']
+
+
+
+            var syllables = ['Lo','rem ','ip','sum ','qui','a ', 'do','lor ','sit ','a','met<br>'];
+            var delay =  [1300,700,700,2000,300,400,1300,1300,1300,600];
+            var sylCount = 0;
+            var lineCount = 0;
+
+            function loremPrint() {
+                if (sylCount < syllables.length) {
                     document.getElementById("loremText").innerHTML += syllables[sylCount];
-                    }, delay[sylCount]);
+                    setTimeout(loremPrint,delay[sylCount]);
+                    sylCount++;
+                } else if (lineCount < 2) {
+                    sylCount = 0;
+                    lineCount++;
+                    setTimeout(loremPrint,700);
+                } else if (lineCount == 2) {
+                    syllables = newSyllables;
+                    sylCount = 0;
+                    lineCount++;
+                    setTimeout(loremPrint,700);
+                } else {
+                    
                 }
+
+            }
+                
+            document.getElementById("loremText").addEventListener("click", function() {
+                /// https://docs.google.com/uc?export=download&id=1t38_drQ25hZQuzGaK8Tx3BCFBMDEQmYk
+                var audio = new Audio("2_Anamanaguchi-Lorem Ipsum (Arctic Anthem).mp3");
+                audio.play()
+                loremPrint();
             },
             {once:true}
             );
+
+
+            
+
+
             
         </script>
 

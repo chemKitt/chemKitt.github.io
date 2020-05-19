@@ -1,0 +1,50 @@
+!<!DOCTYPE html>
+<html class="no-js">
+    <head> 
+        <meta charset="utf-8">
+        <title>Teamoppgave: Rutenett</title>
+        <style>
+            div {
+                height:200px;
+                display:grid;
+                border-color: blueviolet;
+                border-width:10px;
+                grid-template-columns:200px;
+                grid-template-columns:200px;
+                grid-template-areas:
+                    "yin yang yin" 
+                    "yang yin yang" 
+                    "yin yang yin";
+            }
+            div.yin {
+                float:left;
+                background-color: bisque;
+                grid-area: yin;
+                width: 100px ;
+                height: 100px ;  
+            }
+            div.yang {
+                clear: none ;
+                background-color: rgb(255, 95, 170);
+                grid-area: yang;
+                width:100px;
+                height:100px;
+            }
+        </style>
+
+    </head>
+    <body> 
+        <div class="yin"></div><div class="yang"></div><div class="yin"></div>
+
+        <div class="yang"></div>
+        <div class="yin"></div>
+        <div class="yang"></div>
+
+        <div class="yin"></div>
+        <div class="yang"></div>
+        <div class="yin"></div>
+    </body>
+</html>
+
+
+
