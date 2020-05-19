@@ -1,48 +1,62 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js">
     <head> 
         <meta charset="utf-8">
         <title>Teamoppgave: Rutenett</title>
         <style>
             div {
-                height:200px;
-                display:grid;
-                border-color: blueviolet;
-                border-width:10px;
-                grid-template-columns:200px;
-                grid-template-columns:200px;
-                grid-template-areas:
-                    "yin yang yin" 
-                    "yang yin yang" 
-                    "yin yang yin";
+                float: left;
+                /*ght:300px;*/
+                /*display:grid;*/
+                width: 100px;
+                height: 100px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(46, 1, 71);
+                background-color: blue;
+                white-space: pre;
             }
-            div.yin {
-                float:left;
+            .yin {
+                float: left;
                 background-color: bisque;
-                grid-area: yin;
                 width: 100px ;
                 height: 100px ;  
+                clear: left;
             }
-            div.yang {
-                clear: none ;
-                background-color: rgb(255, 95, 170);
-                grid-area: yang;
-                width:100px;
-                height:100px;
-            }
-        </style>
 
+            .farge1{
+                background-color: blue;
+            }
+                
+            .farge2{
+                background-color: rgb(245, 127, 205);
+            }
+            /* div.yinH {
+                float: left;
+                background-color: bisque;
+                /*grid-area: yin;
+                width: 100px;
+                ght: 100px;
+                }
+            div.yang {
+                
+                float: left;
+                background-color: rgb(252, 144, 194);
+                /*grid-area: yang;
+                width:100px;
+                ght:100px;
+                clear: right;
+            } */
+        </style>
     </head>
     <body> 
-        <div class="yin"></div><div class="yang"></div><div class="yin"></div>
+        <div class="yin farge1">1</div><div class="farge2">2</div><div class="farge1">3</div>
+        <div class="yin farge2">4</div><div class="farge1">5</div><div class="farge2">6</div>
+        <div class="yin farge1">7</div><div class="farge2">8</div><div class="farge1">9</div>
 
-        <div class="yang"></div>
-        <div class="yin"></div>
-        <div class="yang"></div>
-
-        <div class="yin"></div>
-        <div class="yang"></div>
-        <div class="yin"></div>
+        <!-- <div class="yin"></div><div class="yin"></div><div class="yin"></div>
+        <div class="yang"></div><div class="yang"></div><div class="yang"></div>
+        <div class="yin"></div><div class="yang"></div><div class="yin"></div> -->
     </body>
 </html>
 
